@@ -48,5 +48,4 @@
         title: "xxx",
         description: "yyyyy"
     }];
-
 })();

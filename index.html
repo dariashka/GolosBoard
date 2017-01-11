@@ -29,50 +29,50 @@
 </head>
 
 <body>
-    <div class="background-image"></div>
-    <div class="wrapper" ng-controller="GolosBoardController as golosBoard">
-        <div class="row">
-            <div class="col-sm-9"></div>
-            <div class="col-sm-3">
-                <div class="input-group">
-                    <span class="input-group-addon" id="basic-addon1">@</span>
-                    <input id="golos-username" ng-model="golosBoard.user" type="text" class="form-control" aria-describedby="basic-addon1">
+    <div class="background-image">
+        <div class="wrapper" ng-controller="GolosBoardController as golosBoard">
+            <div class="row">
+                <div class="col-sm-9"></div>
+                <div class="col-sm-3">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">@</span>
+                        <input id="golos-username" ng-model="golosBoard.user" type="text" class="form-control" aria-describedby="basic-addon1">
+                    </div>
                 </div>
+
+            </div>
+            <div class="container-fluid">
+                <h1 id="header-username">@{{golosBoard.user}}</h1>
             </div>
 
-        </div>
-        <div class="container-fluid">
-            <h1 id="header-username">@{{golosBoard.user}}</h1>
-        </div>
+            <div class="container" id="body-container">
 
-        <div class="container" id="body-container">
+                <div class="row placeholders">
+                    <div class="badge-image col-xs-4 col-sm-2 placeholder" ng-repeat='desc in golosBoard.descs'>
+                        <img src='http://arcange.eu/golos-board/{{golosBoard.user}}/{{desc.id}}.png' alt='badge' data-toggle="modal" data-target="#badgeDescription_{{desc.id}}" class="img-responsive" alt="badge">
 
-            <div class="row placeholders">
-                <div class="col-xs-6 col-sm-3 placeholder" ng-repeat='desc in golosBoard.descs'>
-                    <img src='http://arcange.eu/golos-board/{{golosBoard.user}}/{{desc.id}}.png' alt='badge' data-toggle="modal" data-target="#badgeDescription" class="img-responsive" alt="badge">
-
-                    <div id="badgeDescription" class="modal fade" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                    <h4 class="modal-title">{{desc.title}}</h4>
+                        <div id="badgeDescription_{{desc.id}}" class="modal fade" tabindex="-1" role="dialog">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title">{{desc.title}}</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div ng-bind-html="desc.description"></div>
+                                    </div>
                                 </div>
-                                <div class="modal-body">
-                                    <div ng-bind-html="desc.description"></div>
-                                </div>
+                                <!-- /.modal-content -->
                             </div>
-                            <!-- /.modal-content -->
+                            <!-- /.modal-dialog -->
                         </div>
-                        <!-- /.modal-dialog -->
-                    </div>
-                    <!-- /.modal -->
+                        <!-- /.modal -->
 
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
 </body>
 
 </html>

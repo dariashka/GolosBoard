@@ -4,32 +4,22 @@
 
 .background-image {
     position: fixed;
-    left: auto;
-    right: auto;
     z-index: -1;
     display: block;
-    background-color: rgba(26, 43, 63, 1);
-    /*    background-image: url(https://imgp.golos.io/0x0/https://i.imgsafe.org/433414859e.jpg);*/
+/*    background-color: rgba(26, 43, 63, 1);*/
+    background-image: url(https://i.imgsafe.org/433414859e.jpg);
+    background-position: center;
     width: 100%;
     height: 100%;
     background-size: auto;
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-    filter: blur(5px);
 }
 
 .wrapper {
     height: 100%;
+    background-color: rgba(26, 43, 63, 0.8);
 }
-
-.navbar-inverse {
-    background-color: rgb(22, 30, 43);
-}
-
 .container {
-    margin-top: 70px;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
@@ -45,4 +35,7 @@
     text-transform: uppercase;
     font-weight: 700;
     color: rgb(255,255,255);
+}
+.badge-image {
+    height: auto;
 }
