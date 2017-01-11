@@ -1,6 +1,6 @@
 (function () {
 
-    var app = angular.module('golosBoard', ['ngSanitize']);
+    var app = angular.module('golosBoard', []);
 
 
     app.controller('GolosBoardController', function ($scope, $location) {
@@ -15,10 +15,6 @@
             requireBase: false
         });
     });
-
-    //var username = angular.element($('#golos-username')).val();
-
-
     var Description = [{
         id: "firstpost",
         title: "Первый пост",
@@ -48,4 +44,5 @@
         title: "xxx",
         description: "yyyyy"
     }];
+
 })();
