@@ -6,7 +6,6 @@
     position: fixed;
     z-index: -1;
     display: block;
-/*    background-color: rgba(26, 43, 63, 1);*/
     background-image: url(https://i.imgsafe.org/433414859e.jpg);
     background-position: center;
     width: 100%;
@@ -18,9 +17,13 @@
     height: 100%;
     background-color: rgba(26, 43, 63, 0.8);
 }
+
 .container {
-    margin-top: 20px;
     margin-bottom: 20px;
+}
+
+#body-container {
+    margin-top: 20px;
 }
 
 .header-username {
@@ -34,8 +37,9 @@
     background-position: center;
     text-transform: uppercase;
     font-weight: 700;
-    color: rgb(255,255,255);
+    color: rgb(255, 255, 255);
 }
+
 .badge-image {
     height: auto;
 }

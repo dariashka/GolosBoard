@@ -1,6 +1,6 @@
 (function () {
 
-    var app = angular.module('golosBoard', []);
+    var app = angular.module('golosBoard', ['ngSanitize']);
 
 
     app.controller('GolosBoardController', function ($scope, $location) {
