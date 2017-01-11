@@ -45,3 +45,7 @@
     font-weight: 700;
     color: rgb(255, 255, 255);
 }
+
+.badge-image {
+    height: auto;
+}
