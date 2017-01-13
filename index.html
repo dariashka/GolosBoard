@@ -43,10 +43,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="https://golos.io/">
                     <img class="golos-logo" alt="golos board" src="https://i.imgsafe.org/04b9b72afb.png">
                 </a>
-                <a class="navbar-brand golosboard-header" href="#">Достижения
+                <a class="navbar-brand golosboard-header" href="#">Доска почета
                 </a>
 
             </div>
@@ -61,50 +61,52 @@
         </div>
     </nav>
     <div class="statistics-container container">
-        <h1 class="header header-username"><a href="https://golos.io/@{{golosBoard.user}}"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTl_HW1gYQ0r3w5tLx46xM136kRXooKf9mLTwCe0vH0DCqlT1aCnXEk6g" alt="user logo" class="user-logo"><span>@{{golosBoard.user}}</span></a></h1>
+        <h1 class="header header-username"><a href="https://golos.io/@{{golosBoard.user}}"><!-- <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTl_HW1gYQ0r3w5tLx46xM136kRXooKf9mLTwCe0vH0DCqlT1aCnXEk6g" alt="user logo" class="user-logo">-->
+            <span>@{{golosBoard.user}}</span></a></h1>
         <div class="row">
             <div class="col-sm-2">
-                <div class="statistics">
+                <div class="statistics statistics-left">
                     <!--                    <img src="" alt="">-->
-                    <p class="statistics-q"><span class="glyphicon glyphicon-pencil"></span>
+                    <p class="statistics-q statistics-left"><span class="glyphicon glyphicon-pencil"></span>
                         <span>{{golosBoard.stats[0].test}}</span></p>
-                    <p class="statistics-d"> {{golosBoard.stats[0].description}}</p>
+                    <p class="statistics-d statistics-left"> {{golosBoard.stats[0].description}}</p>
                 </div>
-                <div class="statistics">
+                <div class="statistics statistics-left">
                     <!--                    <img src="" alt="">-->
-                    <p class="statistics-q"><span class="glyphicon glyphicon-comment"></span>
+                    <p class="statistics-q statistics-left"><span class="glyphicon glyphicon-comment"></span>
                         <span>{{golosBoard.stats[1].test}}</span></p>
-                    <p class="statistics-d"> {{golosBoard.stats[1].description}}</p>
+                    <p class="statistics-d statistics-left"> {{golosBoard.stats[1].description}}</p>
                 </div>
             </div>
             <div class="col-sm-2">
-                <div class="statistics">
+                <div class="statistics statistics-left">
                     <!--                    <img src="" alt="">-->
-                    <p class="statistics-q"><span class="glyphicon glyphicon-thumbs-up"></span>
+                    <p class="statistics-q statistics-left"><span class="glyphicon glyphicon-thumbs-up"></span>
                         <span>{{golosBoard.stats[2].test}}</span></p>
-                    <p class="statistics-d"> {{golosBoard.stats[2].description}}</p>
+                    <p class="statistics-d statistics-left"> {{golosBoard.stats[2].description}}</p>
                 </div>
             </div>
             <div class="col-sm-4">
-                <div class="statistics" align="center">
+
+                <div class="statistics statistics-center">
                     <!--                    <img src="" alt="">-->
-                    <p class="statistics-q"><span class="glyphicon glyphicon-star"></span>
+                    <p class="statistics-q statistics-center"><span class="glyphicon glyphicon-star"></span>
                         <span>{{golosBoard.stats[5].test}}</span></p>
-                    <p class="statistics-d"> {{golosBoard.stats[5].description}}</p>
+                    <p class="statistics-d statistics-center"> {{golosBoard.stats[5].description}}</p>
                 </div>
             </div>
-            <div class="col-sm-4" align="right">
-                <div class="statistics">
+            <div class="col-sm-4">
+                <div class="statistics statistics-right">
                     <!--                    <img src="" alt="">-->
-                    <p class="statistics-q"><span class="glyphicon glyphicon-ruble"></span>
+                    <p class="statistics-q statistics-right"><span class="glyphicon glyphicon-ruble"></span>
                         <span>{{golosBoard.stats[3].test}}</span></p>
-                    <p class="statistics-d"> {{golosBoard.stats[3].description}}</p>
+                    <p class="statistics-d statistics-right"> {{golosBoard.stats[3].description}}</p>
                 </div>
-                <div class="statistics">
+                <div class="statistics statistics-right">
                     <!--                    <img src="" alt="">-->
-                    <p class="statistics-q"><span class="glyphicon glyphicon-ruble"></span>
+                    <p class="statistics-q statistics-right"><span class="glyphicon glyphicon-ruble"></span>
                         <span>{{golosBoard.stats[4].test}}</span></p>
-                    <p class="statistics-d"> {{golosBoard.stats[4].description}}</p>
+                    <p class="statistics-d statistics-right"> {{golosBoard.stats[4].description}}</p>
                 </div>
             </div>
         </div>
@@ -114,7 +116,7 @@
     <div class="container" id="body-container">
         <div class="header header-section">
             <h3>Награды</h3></div>
-        <div class="row placeholders">
+        <div class="row row-eq-height placeholders">
             <div class="badge-image col-xs-4 col-sm-2 placeholder" ng-repeat='desc in golosBoard.descs'>
                 <img src='http://arcange.eu/golos-board/{{golosBoard.user}}/{{desc.id}}.png' alt='badge' data-toggle="modal" data-target="#badgeDescription_{{desc.id}}" class="img-responsive" alt="badge">
 
@@ -138,7 +140,7 @@
         </div>
         <div class="header header-section">
             <h3>Следующие награды</h3></div>
-        <div class="row placeholders">
+        <div class="row  row-eq-height placeholders">
             <div class="badge-image col-xs-4 col-sm-2 placeholder" ng-repeat='next in golosBoard.nexts'>
                 <img src='http://arcange.eu/golos-board/{{golosBoard.user}}/{{next.id}}.png' alt='badge' data-toggle="modal" data-target="#badgeDescription_{{next.id}}" class="img-responsive" alt="badge">
 

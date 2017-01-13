@@ -42,6 +42,32 @@
     width: 20px;
 }
 
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (min-width: 480px) {
+    .statistics-center,
+    .statistics-left,
+    .statistics-right {
+        text-align: center;
+    }
+}
+
+
+/* Small Devices, Tablets */
+
+@media only screen and (min-width: 768px) {
+    .statistics-center {
+        text-align: center;
+    }
+    .statistics-left {
+        text-align: left;
+    }
+    .statistics-right {
+        text-align: right;
+    }
+}
+
 .statistics {
     margin-bottom: 20px;
 }
@@ -78,6 +104,10 @@
     color: rgb(255, 255, 255);
 }
 
+.header a:hover {
+    text-decoration: none;
+}
+
 .header-section {
     height: 50px;
     background-size: auto 50px;
@@ -88,6 +118,7 @@
 }
 
 .header-username {
+    padding-top: 25px;
     height: 90px;
     font-size: 30px;
     background-size: auto 70px;
@@ -98,6 +129,19 @@
     border: 1.5px solid rgb(26, 43, 63);
 }
 
+.row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row-eq-height > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
 .badge-image {
     margin-top: 10px;
     padding-top: 10px;
@@ -105,6 +149,7 @@
 }
 
 .badge-image img {
-    max-height: 125px;
+    height: auto;
+    width: 100%;
     max-width: 100%;
 }
