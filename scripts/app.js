@@ -56,6 +56,10 @@
             id: "firstcomment",
             title: "Первый комментарий",
             description: "yyyyy"
+        }, {
+            id: "firstvote",
+            title: "Первый голос",
+            description: "yyyyy"
         },
         {
             id: "firstpayout",
