@@ -1,0 +1,168 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.background-image {
+    position: fixed;
+    z-index: -1;
+    display: block;
+    background-image: url(https://i.imgsafe.org/433414859e.jpg);
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    background-size: auto;
+    margin-top: -90px;
+}
+
+.wrapper {
+    margin-top: -90px;
+    margin-bottom: -90px;
+    height: 120%;
+    background-color: rgba(26, 43, 63, 0.8);
+}
+
+.container {
+    margin-bottom: 20px;
+}
+
+.navbar {
+    padding-top: 20px;
+    background-color: rgba(26, 43, 63, 0.9);
+}
+
+.user-logo {
+    height: 100%;
+    width: auto;
+    border-radius: 50%;
+}
+
+.golosboard-header {
+    text-transform: uppercase
+}
+
+.golos-logo {
+    height: 20px;
+    width: 20px;
+}
+
+.statistics-container {
+    margin-top: 90px;
+}
+
+.statistics-level {
+    height: 50px;
+    width: auto;
+}
+
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (max-width: 768px) {
+    .statistics,
+    .statistics-center,
+    .statistics-left,
+    .statistics-right {
+        text-align: center;
+    }
+}
+
+
+/* Small Devices, Tablets */
+
+@media only screen and (min-width: 768px) {
+    .statistics-center {
+        text-align: center;
+    }
+    .statistics-left {
+        text-align: left;
+    }
+    .statistics-right {
+        text-align: right;
+    }
+}
+
+.statistics {
+    margin-bottom: 20px;
+}
+
+.statistics-q,
+.statistics-d {
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    margin: 0px;
+}
+
+.statistics-q {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#body-container {
+    margin-top: 20px;
+}
+
+.header {
+    vertical-align: middle;
+    text-align: center;
+    background-image: url(../img/background-header.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+}
+
+.header a {
+    color: rgb(255, 255, 255);
+}
+
+.header a:hover {
+    text-decoration: none;
+}
+
+.header-section {
+    height: 50px;
+    background-size: auto 50px;
+}
+
+.header-section h3 {
+    padding-top: 12px;
+}
+
+.header-username {
+    padding-top: 25px;
+    height: 90px;
+    font-size: 30px;
+    background-size: auto 70px;
+}
+
+.header-username img {
+    margin-right: 10px;
+    border: 1.5px solid rgb(26, 43, 63);
+}
+
+.row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row-eq-height > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+.badge-image {
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.badge-image img {
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+}

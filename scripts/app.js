@@ -56,6 +56,10 @@
             id: "firstcomment",
             title: "Первый комментарий",
             description: "yyyyy"
+        }, {
+            id: "firstvote",
+            title: "Первый голос",
+            description: "<html>You receive this medal when you make you first vote on a post or a comment.</html>"
         },
         {
             id: "firstpayout",
