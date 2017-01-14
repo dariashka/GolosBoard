@@ -4,48 +4,107 @@
 
 .background-image {
     position: fixed;
-    left: auto;
-    right: auto;
     z-index: -1;
     display: block;
-    background-image: url(https://imgp.golos.io/0x0/https://i.imgsafe.org/433414859e.jpg);
+    background-image: url(https://i.imgsafe.org/433414859e.jpg);
+    background-position: center;
     width: 100%;
     height: 100%;
     background-size: auto;
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-    filter: blur(5px);
 }
 
 .wrapper {
     height: 100%;
-}
-
-.navbar-inverse {
-    background-color: rgb(22, 30, 43);
+    background-color: rgba(26, 43, 63, 0.8);
 }
 
 .container {
-    margin-top: 70px;
     margin-bottom: 20px;
 }
 
-#header-username {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    vertical-align: center;
+.navbar {
+    padding-top: 20px;
+    background-color: transparent;
+}
+
+.user-logo {
+    height: 100%;
+    width: auto;
+    border-radius: 50%;
+}
+
+.golosboard-header {
+    text-transform: uppercase
+}
+
+.golos-logo {
+    height: 20px;
+    width: 20px;
+}
+
+.statistics {
+    margin-bottom: 20px;
+}
+
+.statistics-q,
+.statistics-d {
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    margin: 0px;
+}
+
+.statistics-q {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#body-container {
+    margin-top: 20px;
+}
+
+.header {
+    vertical-align: middle;
     text-align: center;
-    font-size: 30px;
     background-image: url(img/background-header.png);
-    background-size: auto 70px;
+    background-repeat: no-repeat;
     background-position: center;
     text-transform: uppercase;
     font-weight: 700;
     color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+}
+
+.header a {
+    color: rgb(255, 255, 255);
+}
+
+.header-section {
+    height: 50px;
+    background-size: auto 50px;
+}
+
+.header-section h3 {
+    padding-top: 12px;
+}
+
+.header-username {
+    height: 90px;
+    font-size: 30px;
+    background-size: auto 70px;
+}
+
+.header-username img {
+    margin-right: 10px;
+    border: 2px solid rgb(26, 43, 63);
 }
 
 .badge-image {
-    height: auto;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.badge-image img {
+    max-height: 125px;
+    max-width: 100%;
 }
