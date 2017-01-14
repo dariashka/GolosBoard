@@ -50,16 +50,16 @@
         {
             id: "firstpost",
             title: "Первый пост",
-            description: "yyyyy"
+            description: "<p>Напишите свой первый пост на Голосе и получите бейдж.</p>"
         },
         {
             id: "firstcomment",
             title: "Первый комментарий",
-            description: "yyyyy"
+            description: "<p>Напишите свой первый комментарий на Голосе и получите бейдж.</p>"
         }, {
             id: "firstvote",
             title: "Первый голос",
-            description: "<html>You receive this medal when you make you first vote on a post or a comment.</html>"
+            description: "<html><p>Отдайте свой первый голос на Голосе и получите бейдж.</p></html>"
         },
         {
             id: "firstpayout",

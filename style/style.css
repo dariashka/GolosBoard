@@ -55,32 +55,6 @@
 }
 
 
-/* Extra Small Devices, Phones */
-
-@media only screen and (max-width: 768px) {
-    .statistics,
-    .statistics-center,
-    .statistics-left,
-    .statistics-right {
-        text-align: center;
-    }
-}
-
-
-/* Small Devices, Tablets */
-
-@media only screen and (min-width: 768px) {
-    .statistics-center {
-        text-align: center;
-    }
-    .statistics-left {
-        text-align: left;
-    }
-    .statistics-right {
-        text-align: right;
-    }
-}
-
 .statistics {
     margin-bottom: 20px;
 }
@@ -165,4 +139,35 @@
     height: auto;
     width: 100%;
     max-width: 100%;
+}
+
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (max-width: 768px) {
+    .statistics,
+    .statistics-center,
+    .statistics-left,
+    .statistics-right {
+        text-align: center;
+    }
+    .header-section h3 {
+        font-size: 16px;
+        padding-top: 16px;
+    }
+}
+
+
+/* Small Devices, Tablets */
+
+@media only screen and (min-width: 768px) {
+    .statistics-center {
+        text-align: center;
+    }
+    .statistics-left {
+        text-align: left;
+    }
+    .statistics-right {
+        text-align: right;
+    }
 }
