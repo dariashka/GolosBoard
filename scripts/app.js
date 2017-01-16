@@ -3,11 +3,22 @@
     var app = angular.module('golosBoard', ['ngSanitize']);
 
 
-    app.controller('GolosBoardController', function ($scope, $location) {
+    app.controller('GolosBoardController', function ($scope, $http, $location) {
         this.user = $location.search().user;
         this.descs = Description;
         this.stats = Statistics;
         this.nexts = NextBadges;
+
+
+        $scope.url = "http://golos-chain.arcange.eu/userstats.php?name=" + this.user;
+        this.statData = [];
+
+
+
+        $http.get($scope.url).then(function (response) {
+            this.statData = response.data;
+        });
+
 
     });
 
@@ -77,7 +88,7 @@
             description: "yyyyy"
         },
         {
-            id: "commented",
+            id: "comments_in",
             title: "comments_in",
             description: "yyyyy"
         },
