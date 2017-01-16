@@ -77,7 +77,7 @@
             description: "yyyyy"
         },
         {
-            id: "comments_in",
+            id: "commented",
             title: "comments_in",
             description: "yyyyy"
         },
