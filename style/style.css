@@ -25,9 +25,35 @@
     margin-bottom: 20px;
 }
 
-.navbar {
+.navbar,
+.navbar-default {
     padding-top: 20px;
-    background-color: rgba(26, 43, 63, 0.9);
+    background-color: rgba(26, 43, 63, 0.9) !important;
+    border: none;
+}
+
+.navbar-toggle i {
+    color: rgb(51, 122, 183);
+}
+
+.input-group-addon,
+.form-control,
+.input-group-btn .btn-default {
+    background-color: transparent;
+    border: none;
+    color: rgb(255, 255, 255);
+    background-image: none;
+    text-shadow: none;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.form-control:focus,
+.btn-default:active:focus,
+.btn-default:active:hover {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: transparent;
 }
 
 .user-logo {
@@ -50,10 +76,9 @@
 }
 
 .statistics-level {
-    height: 100px;
+    height: 50px;
     width: auto;
 }
-
 
 .statistics {
     margin-bottom: 20px;
@@ -133,11 +158,12 @@
     margin-top: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
+    text-align: center;
 }
 
 .badge-image img {
     height: auto;
-    width: 100%;
+    width: 100px;
     max-width: 100%;
 }
 
@@ -170,4 +196,30 @@
     .statistics-right {
         text-align: right;
     }
+}
+
+.modal-dialog {
+    margin-top: 10%;
+}
+
+.modal-backdrop {
+    background-color: rgb(26, 43, 63);
+    opacity: 0.9 !important;
+}
+
+.modal-content {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    color: rgb(255, 255, 255)
+}
+
+.modal-header {
+    border: none;
+}
+
+.modal-header img {
+    float: left;
+    margin-top: -35px;
+    margin-left: 45px;
 }
