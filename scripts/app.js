@@ -9,13 +9,16 @@
         this.stats = Statistics;
         this.nexts = NextBadges;
 
-        $scope.url = "https://golos-chain.arcange.eu/userstats.php?name=" + this.user;
+
+        $scope.url = "../userstats.php?name=" + this.user;
 
         $http.get($scope.url)
             .then(function (response) {
                 $scope.statsData = response.data;
             });
-
+        this.username_lowercase = function () {
+            angular.element($('#golos-username-search')).val() = angular.element($('#golos-username-search')).val().toLowerCase();
+        }
         this.updateStats = function () {
             this.user = angular.element($('#golos-username')).val().toLowerCase();
             $scope.url = "https://golos-chain.arcange.eu/userstats.php?name=" + this.user;
@@ -149,7 +152,7 @@
         },
         {
             id: "toppayoutday",
-             title: "Самый дорогой пост за день",
+            title: "Самый дорогой пост за день",
             description: "<p>Ваш пост стал самым высокооплачиваемым за день? Награда ваша!</p>"
         },
         {

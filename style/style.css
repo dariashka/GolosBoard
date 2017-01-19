@@ -14,6 +14,18 @@
     margin-top: -90px;
 }
 
+.jumbotron {
+    margin-top: 90px;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+}
+
+.jumbotron a,
+.jumbotron a:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
 .wrapper {
     margin-top: -90px;
     margin-bottom: -90px;
@@ -54,6 +66,29 @@
     -webkit-box-shadow: none;
     box-shadow: none;
     background-color: transparent;
+}
+
+.mainpage-form {
+    text-align: center;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.mainpage-form .input-group-addon,
+.mainpage-form .form-control,
+.mainpage-form .input-group-btn .btn-default {
+    padding: 0px;
+    font-size: 30px;
+}
+
+.mainpage-form .form-control {
+    padding-top: 25px;
+    padding-left: 15px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    text-transform: lowercase;
 }
 
 .user-logo {
@@ -181,12 +216,15 @@
         font-size: 16px;
         padding-top: 16px;
     }
+    .mainpage-form .form-control {
+        font-size: 15px;
+    }
 }
 
-
-/* Small Devices, Tablets */
-
 @media only screen and (min-width: 768px) {
+    .mainpage-form .form-control {
+        font-size: 15px;
+    }
     .statistics-center {
         text-align: center;
     }
