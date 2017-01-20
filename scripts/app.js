@@ -41,28 +41,22 @@
 
     var Statistics = [{
         id: "posts",
-        description: "постов",
-        test: "123",
+        description: "постов"
     }, {
         id: "comments",
-        description: "комментариев",
-        test: "792",
+        description: "комментариев"
     }, {
         id: "avevotes",
-        description: "в среднем голосов за пост",
-        test: "49",
+        description: "в среднем голосов за пост"
     }, {
         id: "bestpayout",
-        description: "лучшая выплата",
-        test: "1794",
+        description: "выплачено"
     }, {
         id: "avepayout",
-        description: "в среднем выплата за пост",
-        test: "123",
+        description: "в среднем выплата за пост"
     }, {
         id: "golospower",
-        description: "Сила Голоса",
-        test: "3089",
+        description: "Сила Голоса"
     }, ]
 
     var Description = [
