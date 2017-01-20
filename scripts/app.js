@@ -21,7 +21,7 @@
         }
         this.updateStats = function () {
             this.user = angular.element($('#golos-username')).val().toLowerCase();
-            $scope.url = "https://golos-chain.arcange.eu/userstats.php?name=" + this.user;
+            $scope.url = "../userstats.php?name=" + this.user;
             $http.get($scope.url)
                 .then(function (response) {
                     $scope.statsData = response.data;
