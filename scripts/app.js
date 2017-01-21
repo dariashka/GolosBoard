@@ -9,7 +9,11 @@
         this.stats = Statistics;
         this.nexts = NextBadges;
 
-
+        $scope.url = "../userstats.php?name=" + this.user;
+        $http.get($scope.url)
+            .then(function (response) {
+                $scope.statsData = response.data;
+            });
         $scope.url = "../userstats.php?name=" + this.user;
 
         $http.get($scope.url)
@@ -19,15 +23,7 @@
         this.username_lowercase = function () {
             angular.element($('#golos-username-search')).val() = angular.element($('#golos-username-search')).val().toLowerCase();
         }
-        this.updateStats = function () {
-            this.user = angular.element($('#golos-username')).val().toLowerCase();
-            $scope.url = "../userstats.php?name=" + this.user;
-            $http.get($scope.url)
-                .then(function (response) {
-                    $scope.statsData = response.data;
-                });
-        };
-
+       
     });
 
     app.config(function ($locationProvider) {

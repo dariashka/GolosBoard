@@ -89,6 +89,7 @@
     padding-bottom: 20px;
     border-bottom: 2px solid rgb(255, 255, 255);
     text-transform: lowercase;
+    height:60px;
 }
 
 .user-logo {
