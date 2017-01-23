@@ -41,141 +41,39 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand" href="https://golos.io/">
-                    <img class="golos-logo" alt="golos board" src="./img/golos-logo.png">
+                    <img class="golos-logo" alt="golos board" src="https://i.imgsafe.org/04b9b72afb.png">
                 </a>
                 <a class="navbar-brand golosboard-header" href="#">Доска почета</a>
             </div>
         </div>
     </nav>
 
-    <div ng-hide="showme" id="main-page">
-        <div class="jumbotron">
-            <div class="container">
-                <h1>Добро пожаловать на Доску почёта Голоса!</h1>
-                <p><b>Доска почёта</b> - это место, где вы сможете получить награды за свои достижения на <a href="https://golos.io/">Голосе</a>. Здесь же вы сможете увидеть награды других пользователей.</p>
-                <div class="mainpage-form">
-                    <form ng-submit="golosBoard.showUser()">
-                        <h2 align="left">Введите имя пользователя:</h2>
-                        <div class="input-group">
-                            <span class="input-group-addon" id="basic-addon1">@</span>
-                            <input id="golos-username-search" ng-model="text" ng-change="text = text.toLowerCase()"  type="text" class="form-control" aria-describedby="basic-addon1" placeholder="Имя пользователя">
-                            <span class="input-group-btn">
-                            <button class="btn btn-default"   type="submit" ng-click="showme=true;"><i class="glyphicon glyphicon-search"></i></button>
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Добро пожаловать на Доску почёта Голоса!</h1>
+            <p><b>Доска почёта</b> - это место, где вы сможете получить награды за свои достижения на <a href="https://golos.io/">Голосе</a>. Здесь же вы сможете увидеть награды других пользователей.</p>
+            <div class="mainpage-form">
+                <form action='board.html'>
+                    <h2 align="left">Введите имя пользователя:</h2>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">@</span>
+                        <input id="golos-username-search" type="text" ng-model="text" ng-change="text = text.toLowerCase()" name="user" class="form-control" aria-describedby="basic-addon1" placeholder="Имя пользователя">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
                         </span>
-                        </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
-    <div ng-show="showme" id="board-page">
-        <div id="stats" class="statistics-container container">
-            <h1 class="header header-username"><a href="https://golos.io/{{golosBoard.user}}"><!-- <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTl_HW1gYQ0r3w5tLx46xM136kRXooKf9mLTwCe0vH0DCqlT1aCnXEk6g" alt="user logo" class="user-logo">-->
-            <span>{{golosBoard.user}}</span></a></h1>
-            <div class="row">
-                <div class="col-sm-4 col-sm-push-4">
-
-                    <div class="statistics statistics-center">
-                        <img class="statistics-center statistics-level" src="./@{{golosBoard.user}}/level.png" alt="user level" />
-                        <p class="statistics-q statistics-center"><span class="glyphicon glyphicon-star"></span>
-                            <span ng-model="power">{{statsData.records[0].shares| number: 2}}</span></p>
-                        <p class="statistics-d statistics-center"> {{golosBoard.stats[5].description}}</p>
-                    </div>
-                </div>
-                <div class="col-sm-2 col-sm-pull-4">
-                    <div class="statistics statistics-left">
-                        <!--                    <img src="" alt="">-->
-                        <p class="statistics-q statistics-left"><span class="glyphicon glyphicon-pencil"></span>
-                            <span>{{statsData.records[0].post}}</span></p>
-                        <p class="statistics-d statistics-left"> {{golosBoard.stats[0].description}}</p>
-                    </div>
-                    <div class="statistics statistics-left">
-                        <!--                    <img src="" alt="">-->
-                        <p class="statistics-q statistics-left"><span class="glyphicon glyphicon-comment"></span>
-                            <span>{{statsData.records[0].comment}}</span></p>
-                        <p class="statistics-d statistics-left"> {{golosBoard.stats[1].description}}</p>
-                    </div>
-                </div>
-                <div class="col-sm-2 col-sm-pull-4 ">
-                    <div class="statistics statistics-left">
-                        <!--                    <img src="" alt="">-->
-                        <p class="statistics-q statistics-left"><span class="glyphicon glyphicon-thumbs-up"></span>
-                            <span>{{statsData.records[0].commentvotes/statsData.records[0].post| number: 0}}</span></p>
-                        <p class="statistics-d statistics-left"> {{golosBoard.stats[2].description}}</p>
-                    </div>
-                </div>
-
-                <div class="col-sm-4">
-                    <div class="statistics statistics-right">
-                        <!--                    <img src="" alt="">-->
-                        <p class="statistics-q statistics-right"><span class="glyphicon glyphicon-ruble"></span>
-                            <span>{{statsData.records[0].payout| number: 2}}</span></p>
-                        <p class="statistics-d statistics-right"> {{golosBoard.stats[3].description}}</p>
-                    </div>
-                    <div class="statistics statistics-right">
-                        <!--                    <img src="" alt="">-->
-                        <p class="statistics-q statistics-right"><span class="glyphicon glyphicon-ruble"></span>
-                            <span>{{statsData.records[0].payout/statsData.records[0].post| number: 2}}</span></p>
-                        <p class="statistics-d statistics-right"> {{golosBoard.stats[4].description}}</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="container" id="body-container">
-            <div class="header header-section">
-                <h3>Награды</h3></div>
-            <div class="row row-eq-height placeholders">
-                <div class="badge-image col-xs-4 col-sm-2 placeholder" ng-repeat='desc in golosBoard.descs'>
-                    <img class="img-responsive" src='./@{{golosBoard.user}}/{{desc.id}}.png' alt="badge" data-toggle="modal" data-target="#badgeDescription_{{desc.id}}">
-
-                    <div id="badgeDescription_{{desc.id}}" class="modal fade" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-
-                                    <h4 class="modal-title"><img src='./@{{golosBoard.user}}/{{desc.id}}.png' alt="badge" data-toggle="modal" data-target="#badgeDescription_{{desc.id}}"><span>{{desc.title}}</span></h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div ng-bind-html="desc.description"></div>
-                                </div>
-                            </div>
-                            <!-- /.modal-content -->
-                        </div>
-                        <!-- /.modal-dialog -->
-                    </div>
-                    <!-- /.modal -->
-                </div>
-            </div>
-            <div class="header header-section">
-                <h3>Следующие награды</h3></div>
-            <div class="row  row-eq-height placeholders">
-                <div class="badge-image col-xs-4 col-sm-2 placeholder" ng-repeat='next in golosBoard.nexts'>
-                    <img src='./@{{golosBoard.user}}/{{next.id}}.png' data-toggle="modal" data-target="#badgeDescription_{{next.id}}" class="img-responsive" alt="badge">
-
-                    <div id="badgeDescription_{{next.id}}" class="modal fade" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                    <h4 class="modal-title">{{next.title}}</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div ng-bind-html="next.description"></div>
-                                </div>
-                            </div>
-                            <!-- /.modal-content -->
-                        </div>
-                        <!-- /.modal-dialog -->
-                    </div>
-                    <!-- /.modal -->
-                </div>
-            </div>
-        </div>
+    <div clas="container">
+        <footer>
+            <p></p>
+        </footer>
     </div>
+    <!-- /container -->
+
 
 </body>
 

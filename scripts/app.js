@@ -1,36 +1,56 @@
 (function () {
 
-    var app = angular.module('golosBoard', ['ngSanitize']);
-
+    var app = angular.module('golosBoard', ['ngSanitize', 'ngRoute']);
 
     app.controller('GolosBoardController', function ($scope, $log, $http, $location) {
-        this.user = $location.path();
+        this.user = $location.search().user;
         this.descs = Description;
         this.stats = Statistics;
         this.nexts = NextBadges;
-        this.showUser = function () {
-            $location.path('@' + $scope.text);
-            var path = $location.path();
-            this.user = path.substr(1);;
-        }
-        $scope.url = "../userstats.php?name=" + this.user.substr(1);
-        $http.get($scope.url)
+//        this.showUser = function () {
+//            $location.search('user', +$scope.text);
+//            this.user = $scope.text;
+//            console.$log(this.user);
+//        }
+        this.url = "../userstats.php?name=" + this.user;
+        $http.get(this.url)
             .then(function (response) {
                 $scope.statsData = response.data;
             });
 
-        this.username_lowercase = function () {
-            angular.element($('#golos-username-search')).val() = angular.element($('#golos-username-search')).val().toLowerCase();
-        }
+
 
     });
-
+    //    app.controller('BoardController', function ($scope, $log, $http, $location) {
+    //        this.user = $location.path();
+    //        this.descs = Description;
+    //        this.stats = Statistics;
+    //        this.nexts = NextBadges;
+    //        this.url = "../userstats.php?name=" + this.user.substr(1);
+    //        console.log(this.url);
+    //        $http.get(this.url)
+    //            .then(function (response) {
+    //                $scope.statsData = response.data;
+    //            });
+    //    });
+    //    app.config(function ($routeProvider) {
+    //        $routeProvider
+    //            .when("/", {
+    //                templateUrl: "../index.html",
+    //                controller: "GolosBoardController"
+    //            })
+    //            .otherwise({
+    //                templateUrl: "../board.html",
+    //                controller: "BoardController"
+    //            });
+    //    });
     app.config(function ($locationProvider) {
         $locationProvider.html5Mode({
             enabled: true,
             requireBase: false
         });
     });
+
 
     //var username = angular.element($('#golos-username')).val();
 
@@ -78,8 +98,8 @@
             id: "firstcommented",
             title: "First reply",
             description: "<p>Get a reply on one of your post or comment.</p>"
-        }, 
-		{
+        },
+        {
             id: "firstvoted",
             title: "First upvote",
             description: "<html><p>Get a first upvote on one of your post or comment.</p></html>"
@@ -161,17 +181,17 @@
         },
 	];
     var NextBadges = [
-	{
+        {
             id: "next_posts",
             title: "Еще больше постов",
             description: "<p>Пишите посты и получайте новые бейджи за бОльшее их количество.</p>"
         },
-		{
+        {
             id: "next_comments",
             title: "Next comments award",
             description: "<p>Publish more replies to other's posts or comments to get this award.</p>"
         },
-		{
+        {
             id: "next_votes",
             title: "Next upvote award",
             description: "<p>Votes more other authors to get this award.</p>"
